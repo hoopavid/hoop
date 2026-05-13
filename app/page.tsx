@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Oswald, Inter } from "next/font/google";
 import { Instagram, Mail, Play } from "lucide-react";
 
+
 const oswald = Oswald({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -121,6 +122,7 @@ export default function Home() {
                   />
 
                   {/* MOBILE PDF BUTTON */}
+{/*                 
 <a
   href="/profile.pdf"
   target="_blank"
@@ -144,6 +146,7 @@ export default function Home() {
 >
   Download PDF
 </a>  
+*/}
 
                 </div>
 
@@ -167,6 +170,8 @@ export default function Home() {
               />
 
                 {/* DOWNLOAD PDF BUTTON */}
+
+{/*
 <a
   href="/profile.pdf"
   target="_blank"
@@ -190,6 +195,7 @@ export default function Home() {
 >
   Download PDF
 </a>
+*/}
 
             </div>
 
@@ -221,7 +227,7 @@ export default function Home() {
                 <Row label="Weight" value="160 lbs" />
                 <Row label="Position" value="SG / PG" />
                 <Row label="Class" value="2027" />
-                <Row label="School" value="James Logan HS" />
+                <Row label="School" value="James Logan HS, California" />
                 <Row label="Wingspan" value={`6'6"`} />
                 <Row label="Vertical" value={`36"`} />
 
@@ -232,7 +238,7 @@ export default function Home() {
             {/* STATS */}
             <Card>
 
-              <SubTitle title="Performance Stats" />
+              <SubTitle title="Performance Stats (TBD)" />
 
               <div className="space-y-6">
 
@@ -280,7 +286,7 @@ export default function Home() {
       <div className="border border-yellow-400/60 rounded-2xl bg-zinc-950/80 backdrop-blur-md shadow-xl p-6">
 
         <p className="text-yellow-400 text-xs uppercase tracking-[0.2em] font-semibold">
-          Elite Shooting
+          Elite Shooting (TBD)
         </p>
 
         <h3 className="text-white text-2xl font-bold mt-3 leading-tight">
@@ -298,7 +304,7 @@ export default function Home() {
       <div className="border border-yellow-400/60 rounded-2xl bg-zinc-950/80 backdrop-blur-md shadow-xl p-6">
 
         <p className="text-yellow-400 text-xs uppercase tracking-[0.2em] font-semibold">
-          Scoring Efficiency
+          Scoring Efficiency (TBD)
         </p>
 
         <h3 className="text-white text-2xl font-bold mt-3 leading-tight">
@@ -353,14 +359,32 @@ export default function Home() {
 
           <SubTitle title="More Highlights" />
 
-          <div className="grid md:grid-cols-2 gap-6">
+             <div className="grid md:grid-cols-2 gap-6">
 
-            <FilmCard title="AAU Circuit Film" />
-            <FilmCard title="vs Oakland High School" />
-            <FilmCard title="Clutch Moments" />
-            <FilmCard title="Skill Workout Film" />
+            <FilmCard
+              title="AAU Las Vegas, NV Apr 2026"
+              videoUrl="https://www.youtube.com/embed/gus-jeb13BM?si=ZxhrIFnx3J55mr1N"
+            />
+
+            <FilmCard
+              title="James Logan High School"
+              videoUrl="https://www.hudl.com/embed/video/2/631420/69d80e4b235bb8f4612a7707"
+            />
+
+            <FilmCard
+              title="Clutch Moments"
+              videoUrl="https://www.youtube.com/embed/gus-jeb13BM?si=ZxhrIFnx3J55mr1N"
+            />
+
+            <FilmCard
+              title="Skill Workout Film"
+              videoUrl="https://www.youtube.com/embed/gus-jeb13BM?si=ZxhrIFnx3J55mr1N"
+            />
 
           </div>
+
+
+
         </div>
       </section>
 
@@ -447,8 +471,6 @@ export default function Home() {
             three-point range. Capable secondary ball handler with strong
             court vision and pace control. Plays within the system, makes
             smart decisions under pressure, and competes with confidence.
-            Continuing to develop defensive physicality and finishing
-            through contact.
 
           </div>
 
@@ -612,18 +634,21 @@ function StatBar({
   );
 }
 
+
 /* FILM CARD */
 function FilmCard({
   title,
+  videoUrl
 }: {
   title: string;
+  videoUrl: string;
 }) {
   return (
     <div className="overflow-hidden rounded-3xl border border-yellow-500/20 bg-black shadow-xl hover:-translate-y-1 transition duration-300">
 
       <iframe
         className="w-full aspect-video"
-        src="https://www.youtube.com/embed/mrbZo39qZj0"
+        src={videoUrl}
         allowFullScreen
       />
 
@@ -649,7 +674,7 @@ function FilmCard({
   );
 }
 
-/* GAME CARD */
+
 /* GAME CARD */
 function Game({
   date,
