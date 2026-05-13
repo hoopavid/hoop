@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Oswald, Inter } from "next/font/google";
 import { Instagram, Mail, Play } from "lucide-react";
 
@@ -39,18 +40,22 @@ export default function Home() {
 
               {/* PROFILE IMAGE */}
               <div className="shrink-0">
-                <img
-                  src="/images/profile2.png"
-                  alt="Aayan Sharma"
-                  className="
-                    w-32 h-32
-                    md:w-40 md:h-40
-                    rounded-full
-                    object-cover
-                    border-4 border-yellow-400
-                    shadow-[0_0_35px_rgba(250,204,21,0.35)]
-                  "
-                />
+                <div className="relative w-32 h-32 md:w-40 md:h-40">
+
+  <Image
+    src="/images/profile2.png"
+    alt="Aayan Sharma"
+    fill
+    priority
+    className="
+      rounded-full
+      object-cover
+      border-4 border-yellow-400
+      shadow-[0_0_35px_rgba(250,204,21,0.35)]
+    "
+  />
+
+</div>
               </div>
 
               {/* INFO */}
@@ -76,7 +81,7 @@ export default function Home() {
 <div className="mt-5 flex flex-wrap justify-center sm:justify-start gap-3 text-sm">
 
   <div className="bg-black/40 border border-yellow-500/20 px-3 py-2 rounded-xl">
-    6'3" SG
+    6&apos;3&quot; SG
   </div>
 
   <div className="bg-black/40 border border-yellow-500/20 px-3 py-2 rounded-xl">
