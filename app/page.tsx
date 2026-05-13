@@ -115,10 +115,35 @@ export default function Home() {
                   />
 
                   <ContactLink
-                    href="mailto:aayanbasketball@gmail.com"
+                    href="mailto:aayanusa2021@gmail.com"
                     icon={<Mail size={16} />}
-                    text="aayanbasketball@gmail.com"
+                    text="aayanusa2021@gmail.com"
                   />
+
+                  {/* MOBILE PDF BUTTON */}
+<a
+  href="/profile.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    mt-1
+    bg-yellow-400/10
+    border border-yellow-400/30
+    text-yellow-300
+    text-xs
+    font-semibold
+    uppercase
+    tracking-[0.2em]
+    px-4
+    py-2
+    rounded-lg
+    hover:bg-yellow-400/20
+    hover:border-yellow-400/60
+    transition
+  "
+>
+  Download PDF
+</a>  
 
                 </div>
 
@@ -136,10 +161,35 @@ export default function Home() {
               />
 
               <ContactLink
-                href="mailto:aayanbasketball@gmail.com"
+                href="mailto:aayanusa2021@gmail.com"
                 icon={<Mail size={16} />}
-                text="aayanbasketball@gmail.com"
+                text="aayanusa2021@gmail.com"
               />
+
+                {/* DOWNLOAD PDF BUTTON */}
+<a
+  href="/profile.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    mt-1
+    bg-yellow-400/10
+    border border-yellow-400/30
+    text-yellow-300
+    text-xs
+    font-semibold
+    uppercase
+    tracking-[0.2em]
+    px-4
+    py-2
+    rounded-lg
+    hover:bg-yellow-400/20
+    hover:border-yellow-400/60
+    transition
+  "
+>
+  Download PDF
+</a>
 
             </div>
 
